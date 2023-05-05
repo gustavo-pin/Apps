@@ -6,6 +6,7 @@ set /p senha="Digite sua senha> "
 
 if "%senha%" == "p" goto block1
 if "%senha%" == "senha" goto block2
+if "%senha%" == "SENHA" goto block2
 
 :block1
 goto start1
@@ -19,22 +20,36 @@ cls
 echo.
 echo SEUS APPS
 echo.
-echo    --------------------------------
-echo    -  [1] Chrome Gustavo          -
-echo    -  [2] Cancelar                -
-echo    --------------------------------
+echo    	-------------------------------------
+echo    	-  [1] Opera
+echo    	-  [2] Chrome
+echo    	-  [3] WhatsApp 
+echo    	-  [4] Cancelar            
+echo    	-------------------------------------
 echo.
 set /p opcao="Digite sua opcao> "
 
 if "%opcao%" == "1" goto op1
 if "%opcao%" == "2" goto op2
+if "%opcao%" == "3" goto op3
+if "%opcao%" == "4" goto op4
 
 :op1
 cd /Users/GERALDO/Documents/Security Annc/02158135203245
-start GustavoChrome
+start Opera
 goto fim
 
 :op2
+cd D:\Documents\Security Annc\02158135203245
+start GustavoChrome
+goto fim
+
+:op3
+cd D:\Documents\Security Annc\02158135203245
+start WhatsApp
+goto fim
+
+:op4
 cls
 goto cancelar1
 
@@ -60,16 +75,11 @@ echo.
 echo SEUS APPS
 echo.
 echo    --------------------------------
-echo    -  [1] Chrome Gustavo          -
+echo    -  [1] Chrome Gustavo  
+echo    -  [2] Meu Projeto
 echo    --------------------------------
 echo.
 set /p opcao="Digite sua opcao> "
 
 if "%opcao%" == "1" goto op1
 if "%opcao%" == "2" goto op2
-
-:op1
-cd /Users/GERALDO/Documents/Security Annc/02158135203245
-start GustavoChrome
-goto fim
-
